@@ -1,4 +1,4 @@
-## Draft
+## Word Wizard (DFRAFT)
 
 (1) What is this project about
 
@@ -10,3 +10,5 @@
 /README.md - A markdown file that provides an overview of the project, instructions on how to set it up, and other documentation.
 
 (3) Instruction on how to set up
+
+(4) Game Rules
