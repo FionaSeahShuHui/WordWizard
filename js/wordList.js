@@ -197,5 +197,7 @@ const gameWordList = [
     "Zimbabwe"
 ];
   
-  export { gameWordList };
-  
+function getRandomGameWord() {
+    const randomIndex = Math.floor(Math.random() * gameWordList.length)
+    return gameWordList[randomIndex];
+}
