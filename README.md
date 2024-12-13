@@ -12,3 +12,5 @@
 (3) Instruction on how to set up
 
 (4) Game Rules
+Max Guess: 6  (Head, Body, Left Arm, Right arm, Left Leg, Right Leg)
+Winning Condition: Guess the word correctly before the max guess
