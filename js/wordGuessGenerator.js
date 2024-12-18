@@ -8,3 +8,19 @@ for (let i = 0; i < randomWord.length; i++) {
     letterBox.className = "wordGuessLetter";
     wordGuess.appendChild(letterBox);
 }
+
+function handleGuess(letter) {
+    let isCorrect = false;
+    const letterBoxes = document.querySelectorAll(".wordGuessLetter");
+
+    for (let i = 0; i < randomWord.length; i++) {
+        if (randomWord[i].toLowerCase() === letter) {
+            letterBoxes[i].innerText = randomWord[i]; // Reveal the letter
+            isCorrect = true;
+        }
+    }
+
+    if (!isCorrect) {
+        console.log("Wrong guess!");
+    }
+}
