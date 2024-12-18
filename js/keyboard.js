@@ -9,6 +9,10 @@ for (let i = 65; i <91; i++) {
     keyboardButton.addEventListener("click", function () {
         const letterGuess = keyboardButton.innerText.toLowerCase()
         handleGuess(letterGuess);
+
+        keyboardButton.disabled = true;
+        keyboardButton.classList.add("disabled");
+        
         console.log(letterGuess);
     });
 }
