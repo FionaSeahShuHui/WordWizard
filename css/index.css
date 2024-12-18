@@ -11,6 +11,30 @@
     color: aqua;
 }
 
+#wordGuess {
+    background-color: blueviolet;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wordGuessLetter {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .keyboardButton{
     background-color: blue;
     border-radius: 5px;
