@@ -1,4 +1,5 @@
 const wordGuess = document.getElementById("wordGuess")
+const hangmanImage = document.getElementById("hangmanImage");
 
 let wrongGuessCount = 0;
 const maxWrongGuessCount = 6;
@@ -18,12 +19,12 @@ function initializeGame() {
         wordGuess.appendChild(letterBox);
     }
     initializeKeyboard();
+    hangmanImage.src = "./assets/images/hangman/0.png";
 }
 
 function handleGuess(letter) {
     let isCorrect = false;
     const letterBoxes = document.querySelectorAll(".wordGuessLetter");
-
     for (let i = 0; i < randomWord.length; i++) {
         if (randomWord[i].toLowerCase() === letter) {
             letterBoxes[i].innerText = randomWord[i]; // Reveal the letter
@@ -34,6 +35,7 @@ function handleGuess(letter) {
     if (!isCorrect) {
         console.log("Wrong guess!");
         wrongGuessCount += 1
+        hangmanImage.src = `./assets/images/hangman/${wrongGuessCount}.png`;
     }
 
     if (wrongGuessCount >= maxWrongGuessCount) {
