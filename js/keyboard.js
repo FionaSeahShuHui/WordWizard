@@ -8,7 +8,7 @@ for (let i = 65; i <91; i++) {
 
     keyboardButton.addEventListener("click", function () {
         const letterGuess = keyboardButton.innerText.toLowerCase()
-        console.log(letterGuess);
         handleGuess(letterGuess);
+        console.log(letterGuess);
     });
 }

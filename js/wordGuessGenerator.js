@@ -1,5 +1,8 @@
 const wordGuess = document.getElementById("wordGuess")
 
+let wrongGuessCount = 0;
+const maxWrongGuessCount = 6;
+
 const randomWord = getRandomGameWord();
 console.log(randomWord)
 let word = "";
@@ -22,5 +25,10 @@ function handleGuess(letter) {
 
     if (!isCorrect) {
         console.log("Wrong guess!");
+        wrongGuessCount += 1
+    }
+
+    if (wrongGuessCount >= maxWrongGuessCount) {
+        console.log("Game Over")
     }
 }
