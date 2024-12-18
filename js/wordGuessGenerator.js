@@ -3,13 +3,21 @@ const wordGuess = document.getElementById("wordGuess")
 let wrongGuessCount = 0;
 const maxWrongGuessCount = 6;
 
-const randomWord = getRandomGameWord();
-console.log(randomWord)
+let randomWord;
 let word = "";
-for (let i = 0; i < randomWord.length; i++) {
-    const letterBox = document.createElement("div");
-    letterBox.className = "wordGuessLetter";
-    wordGuess.appendChild(letterBox);
+initializeGame();
+
+function initializeGame() {
+    wordGuess.innerHTML = "";
+    wrongGuessCount = 0;
+    randomWord = getRandomGameWord();
+    console.log("New Word: "+randomWord);
+    for (let i = 0; i < randomWord.length; i++) {
+        const letterBox = document.createElement("div");
+        letterBox.className = "wordGuessLetter";
+        wordGuess.appendChild(letterBox);
+    }
+    initializeKeyboard();
 }
 
 function handleGuess(letter) {
@@ -30,5 +38,7 @@ function handleGuess(letter) {
 
     if (wrongGuessCount >= maxWrongGuessCount) {
         console.log("Game Over")
+        alert("Game Over. The word is "+randomWord)
+        initializeGame()
     }
 }
